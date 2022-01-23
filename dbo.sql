@@ -2,6 +2,7 @@
 (
 	[Id] INT NOT NULL PRIMARY KEY, 
     [Material] NVARCHAR(50) NULL, 
-    [Grosime] FLOAT NULL
+    [Grosime] FLOAT NULL, 
+    [Lambda] FLOAT NULL
 	
 )
