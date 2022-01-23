@@ -8,7 +8,25 @@ namespace HC5
 {
     public class StraturiModel
     {
-        public double dimenisune;
+        public string id;
+        public string material;
+        public double grosime;
         public double lambda;
+
+        public StraturiModel(string id, string material, double grosime, double lambda)
+        {
+            this.id = id;
+            this.material = material;
+            this.grosime = grosime;
+            this.lambda = lambda;
+        }
+
+
+        override
+        public string ToString()
+        {
+            return this.material;
+        }
+
     }
 }
