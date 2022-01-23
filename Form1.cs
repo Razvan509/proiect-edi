@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HC5;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -109,6 +110,41 @@ namespace HC2
 
         }
 
+        public List<double> CalculRezistente(StraturiModel[]straturi)
+        {
+            List<double> rezistente = new List<double>();
+            foreach(StraturiModel m in straturi)
+            {
+                double r = m.dimenisune / m.lambda;
+                rezistente.Add(r);
+            }
+            return rezistente;
+        }
+
+
+        public double CalculculRT(List<double> rezistente)
+        {
+            return rsi + rse + rezistente.Aggregate((x, y) => x + y);
+        }
+
+        public double CalculTSI(double ti, double te, double rt)
+        {
+            return ti - (rsi * (ti - te)) / rt;
+        }
+
+        public List<double> CalculTheta(double ti, double te, double rt, List<double> rezistente)
+        {
+            List<double> thetas = new List<double>();
+            double sumaRezistente = 0;
+
+            foreach(double r in rezistente)
+            {
+                sumaRezistente += r;
+                double t = ti - ((rsi + sumaRezistente) * (ti - te)) / rt;
+                thetas.Add(t);
+            }
+            return thetas;
+        }
       
         
 
