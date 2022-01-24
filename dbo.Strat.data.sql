@@ -13,3 +13,4 @@ INSERT INTO [dbo].[Strat] ([Id], [Material], [Grosime], [Lambda]) VALUES (12, N'
 INSERT INTO [dbo].[Strat] ([Id], [Material], [Grosime], [Lambda]) VALUES (13, N'Zidarie din BCA', 0.13, 0.3)
 INSERT INTO [dbo].[Strat] ([Id], [Material], [Grosime], [Lambda]) VALUES (14, N'Otel de constructii', 0.1, 58)
 INSERT INTO [dbo].[Strat] ([Id], [Material], [Grosime], [Lambda]) VALUES (15, N'Polistiren celular', 0.1, 0.044)
+

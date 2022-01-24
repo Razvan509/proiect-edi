@@ -8,12 +8,12 @@ namespace HC5
 {
     public class StraturiModel
     {
-        public string id;
+        public int id;
         public string material;
         public double grosime;
         public double lambda;
 
-        public StraturiModel(string id, string material, double grosime, double lambda)
+        public StraturiModel(int id, string material, double grosime, double lambda)
         {
             this.id = id;
             this.material = material;

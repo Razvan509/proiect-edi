@@ -33,6 +33,7 @@ namespace HC2
             this.straturiSelectate = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.formsPlot1 = new ScottPlot.FormsPlot();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listaStructuri
@@ -40,7 +41,7 @@ namespace HC2
             this.listaStructuri.FormattingEnabled = true;
             this.listaStructuri.Location = new System.Drawing.Point(306, 52);
             this.listaStructuri.Name = "listaStructuri";
-            this.listaStructuri.Size = new System.Drawing.Size(121, 21);
+            this.listaStructuri.Size = new System.Drawing.Size(252, 21);
             this.listaStructuri.TabIndex = 2;
             this.listaStructuri.Text = "Selectati un strat";
             // 
@@ -55,27 +56,38 @@ namespace HC2
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(460, 50);
+            this.button1.Location = new System.Drawing.Point(575, 50);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "Adauga Strat";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // formsPlot1
             // 
-            this.formsPlot1.Location = new System.Drawing.Point(289, 114);
+            this.formsPlot1.Location = new System.Drawing.Point(306, 106);
             this.formsPlot1.Name = "formsPlot1";
-            this.formsPlot1.Size = new System.Drawing.Size(1050, 522);
+            this.formsPlot1.Size = new System.Drawing.Size(1050, 673);
             this.formsPlot1.TabIndex = 5;
             this.formsPlot1.Load += new System.EventHandler(this.formsPlot1_Load);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(794, 50);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Calculeaza";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1375, 699);
+            this.ClientSize = new System.Drawing.Size(1827, 817);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.formsPlot1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.straturiSelectate);
@@ -93,6 +105,7 @@ namespace HC2
         private System.Windows.Forms.ListBox straturiSelectate;
         private System.Windows.Forms.Button button1;
         private ScottPlot.FormsPlot formsPlot1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
